@@ -6,10 +6,30 @@ import java.util.Scanner;
 public class UserInterface {
     Dealership dealership;
     Scanner scanner;
+    DealershipFileManager dealershipFileManager;
 
     public UserInterface() {
-        this.dealership = new Dealership("Dealership", "333 Meow St", "800-000-000");
         this.scanner = new Scanner(System.in);
+        init();
+    }
+
+    private void init() {
+        this.dealershipFileManager = new DealershipFileManager("inventory.csv");
+        this.dealership = dealershipFileManager.getDealership();
+    }
+
+    private void displayVehicles(List<Vehicle> vehicles) {
+        for (Vehicle vehicle : vehicles) {
+            System.out.println("VIN: " + vehicle.vin);
+            System.out.println("Year: " + vehicle.year);
+            System.out.println("Make: " + vehicle.make);
+            System.out.println("Model: " + vehicle.model);
+            System.out.println("Type: " + vehicle.vehicleType);
+            System.out.println("Color: " + vehicle.color);
+            System.out.println("Odometer: " + vehicle.odometer);
+            System.out.println("Price: " + vehicle.price);
+            System.out.println("-------------------------");
+        }
     }
 
     public void display() {
@@ -66,9 +86,7 @@ public class UserInterface {
 
     public void processGetAllVehicleRequest() {
         List<Vehicle> vehicles = dealership.getAllVehicles();
-        for (Vehicle vehicle : vehicles) {
-            System.out.println(vehicle);
-        }
+        displayVehicles(vehicles);
     }
 
     public void processGetByPriceRequest() {
