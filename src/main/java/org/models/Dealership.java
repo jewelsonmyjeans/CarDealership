@@ -21,32 +21,63 @@ public class Dealership {
     }
 
     public ArrayList<Vehicle> getVehiclesByPrice(int min, int max) {
-        return new ArrayList<>();
+        ArrayList<Vehicle> result = new ArrayList<>();
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getPrice() >= min && vehicle.getPrice() <= max) {
+                result.add(vehicle);
+            }
+        }
+        return result;
     }
 
     public ArrayList<Vehicle> getVehiclesByMakeModel(String make, String model) {
-
-        return null;
+        ArrayList<Vehicle> result = new ArrayList<>();
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getMake().equals(make) && vehicle.getModel().equals(model)) {
+                result.add(vehicle);
+            }
+        }
+        return result;
     }
 
-    public ArrayList<Vehicle> getVehiclesByYear(String min, String max) {
-
-        return null;
+    public ArrayList<Vehicle> getVehiclesByYear(int min, int max) {
+        ArrayList<Vehicle> result = new ArrayList<>();
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getYear() >= min && vehicle.getYear() <= max) {
+                result.add(vehicle);
+            }
+        }
+        return result;
     }
 
     public ArrayList<Vehicle> getVehiclesByColor(String color) {
-        return null;
-
+        ArrayList<Vehicle> result = new ArrayList<>();
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getColor().equals(color)) {
+                result.add(vehicle);
+            }
+        }
+        return result;
     }
 
     public ArrayList<Vehicle> getVehiclesByMileage(int min, int max) {
-        return null;
-
+        ArrayList<Vehicle> result = new ArrayList<>();
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getOdometer() >= min && vehicle.getOdometer() <= max) {
+                result.add(vehicle);
+            }
+        }
+        return result;
     }
 
     public ArrayList<Vehicle> getVehiclesByType(String vehicleType) {
-
-        return null;
+        ArrayList<Vehicle> result = new ArrayList<>();
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getVehicleType().equals(vehicleType)) {
+                result.add(vehicle);
+            }
+        }
+        return result;
     }
 
     public ArrayList<Vehicle> getAllVehicles() {

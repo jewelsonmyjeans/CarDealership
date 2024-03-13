@@ -4,9 +4,6 @@ public class Vehicle {
 
     private int vin;
 
-    public int getVin() {
-        return vin;
-    }
     private int dealerId;
     private int year;
     int odometer;
@@ -15,6 +12,38 @@ public class Vehicle {
     private String make;
     private String model;
     private String vehicleType;
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getVin() {
+        return vin;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getOdometer() {
+        return odometer;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
 
     public Vehicle(int vin, int dealerId, int year, String make, String model, String vehicleType, String color, int odometer, double price) {
         this.vin = vin;
