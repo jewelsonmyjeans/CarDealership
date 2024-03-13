@@ -2,3 +2,12 @@ vin,dealer id,year,make,model,type, color,miles,price
 10112,1,1993,Ford,Explorer,SUV,Red,525123,995
 37846,1,2001,Ford,Ranger,truck,Yellow,172544,1995
 44901,2,2012,Honda,Civic,SUV,Gray,103221,6995
+10234,1,2005,Toyota,Camry,Sedan,Blue,120000,5000
+56789,2,2010,Ford,Focus,Sedan,Red,80000,7000
+12345,1,2015,Honda,Accord,Sedan,Black,60000,15000
+67890,2,2020,Toyota,Rav4,SUV,White,30000,25000
+23456,1,2018,Ford,Escape,SUV,Gray,40000,20000
+78901,2,2017,Honda,CR-V,SUV,Blue,50000,22000
+34567,1,2019,Toyota,Highlander,SUV,Black,35000,30000
+89012,2,2021,Ford,Explorer,SUV,White,20000,35000
+45678,1,2022,Honda,Pilot,SUV,Red,10000,40000
