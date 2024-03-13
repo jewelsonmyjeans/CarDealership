@@ -62,8 +62,8 @@ public class Dealership {
         addVehicle(Integer.parseInt(values[0]), Integer.parseInt(values[1]), Integer.parseInt(values[2]), values[3], values[4], values[5], values[6], Integer.parseInt(values[7]), Integer.parseInt(values[8]));
     }
 
-    public void removeVehicle() {
-
+    public void removeVehicle(int vin) {
+        inventory.removeIf(vehicle -> vehicle.getVin() == vin);
     }
 
     @Override

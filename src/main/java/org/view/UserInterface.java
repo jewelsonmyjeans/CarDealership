@@ -154,18 +154,31 @@ public class UserInterface {
         displayVehicles(this.dealership.getAllVehicles());
         System.out.println();
     }
-
     public void processAddVehicleRequest() {
         System.out.println("Adding vehicle...");
-//        displayVehicles(this.dealership.getAllVehicles());
-        System.out.println();
 
+        int vin = promptUserForInt("Enter VIN");
+        int dealerId = promptUserForInt("Enter Dealer ID");
+        int year = promptUserForInt("Enter Year");
+        String make = promptUserForString("Enter Make");
+        String model = promptUserForString("Enter Model");
+        String type = promptUserForString("Enter Type");
+        String color = promptUserForString("Enter Color");
+        int miles = promptUserForInt("Enter Miles");
+        int price = promptUserForInt("Enter Price");
+
+        dealership.addVehicle(vin, dealerId, year, make, model, type, color, miles, price);
+
+        System.out.println("Vehicle added successfully.");
     }
 
     public void processRemoveVehicleRequest() {
         System.out.println("Removing vehicle...");
-//        displayVehicles(this.dealership.getAllVehicles());
-        System.out.println();
 
+        int vin = promptUserForInt("Enter VIN of the vehicle to remove");
+
+        dealership.removeVehicle(vin);
+
+        System.out.println("Vehicle removed successfully.");
     }
 }

@@ -3,6 +3,10 @@ package org.models;
 public class Vehicle {
 
     private int vin;
+
+    public int getVin() {
+        return vin;
+    }
     private int dealerId;
     private int year;
     int odometer;
