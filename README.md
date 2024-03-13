@@ -29,9 +29,3 @@ To run the application, use the following command:
 java -cp target/CarDealership-1.0-SNAPSHOT.jar com.pluralsight.Main
 ```
 Replace CarDealership-1.0-SNAPSHOT.jar with the name of the JAR file generated during the build process.  
-
-## Contributing
-Contributions are welcome! Please read the contributing guidelines before making any changes.  
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
