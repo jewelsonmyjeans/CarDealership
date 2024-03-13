@@ -11,3 +11,4 @@ vin,dealer id,year,make,model,type, color,miles,price
 34567,1,2019,Toyota,Highlander,SUV,Black,35000,30000
 89012,2,2021,Ford,Explorer,SUV,White,20000,35000
 45678,1,2022,Honda,Pilot,SUV,Red,10000,40000
+90123,2,2016,Toyota,4Runner,SUV,Gray,45000,28000
