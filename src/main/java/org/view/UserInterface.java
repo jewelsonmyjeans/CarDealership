@@ -118,33 +118,43 @@ public class UserInterface {
     }
 
     public void processGetByMakeModelRequest() {
-        System.out.println("Vehicles");
-        System.out.println("--------");
+        String make = promptUserForString("Enter Make");
+        String model = promptUserForString("Enter Model");
+
+        System.out.printf("Vehicles by %s %s\n", make, model);
+        displayVehicles(dealership.getVehiclesByMakeModel(make, model));
         System.out.println();
     }
 
     public void processGetByYearRequest() {
-        System.out.println("Vehicles");
-        System.out.println("--------");
-        System.out.println();
+        int year = promptUserForInt("Enter Year");
 
+        System.out.printf("Vehicles from %d\n", year);
+        displayVehicles(dealership.getVehiclesByYear(year, year));
+        System.out.println();
     }
 
     public void processGetByColorRequest() {
-        System.out.println("Vehicles");
-        System.out.println("--------");
+        String color = promptUserForString("Enter Color");
+
+        System.out.printf("Vehicles with color %s\n", color);
+        displayVehicles(dealership.getVehiclesByColor(color));
         System.out.println();
     }
 
     public void processGetByMileageRequest() {
-        System.out.println("Vehicles");
-        System.out.println("--------");
+        int mileage = promptUserForInt("Enter Mileage");
+
+        System.out.printf("Vehicles with mileage less than %d\n", mileage);
+        displayVehicles(dealership.getVehiclesByMileage(0, mileage));
         System.out.println();
     }
 
     public void processGetByVehicleTypeRequest() {
-        System.out.println("Vehicles");
-        System.out.println("--------");
+        String type = promptUserForString("Enter Type (car, truck, SUV, van)");
+
+        System.out.printf("Vehicles of type %s\n", type);
+        displayVehicles(dealership.getVehiclesByType(type));
         System.out.println();
     }
 

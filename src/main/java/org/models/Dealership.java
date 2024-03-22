@@ -1,6 +1,6 @@
 package org.models;
 
-
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Dealership {
@@ -86,6 +86,21 @@ public class Dealership {
     }
 
     public void addVehicle(int vin, int dealerId, int year, String make, String model, String type, String color, int miles, int price) {
+        if (vin <= 0) {
+            throw new IllegalArgumentException("VIN must be positive.");
+        }
+        if (dealerId <= 0) {
+            throw new IllegalArgumentException("Dealer ID must be positive.");
+        }
+        if (year < 1886 || year > LocalDate.now().getYear()) {
+            throw new IllegalArgumentException("Year must be between 1886 and the current year.");
+        }
+        if (miles < 0) {
+            throw new IllegalArgumentException("Miles must be non-negative.");
+        }
+        if (price < 0) {
+            throw new IllegalArgumentException("Price must be non-negative.");
+        }
         inventory.add(new Vehicle(vin, dealerId, year, make, model, type, color, miles, price));
     }
 
